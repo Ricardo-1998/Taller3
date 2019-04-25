@@ -62,9 +62,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
+            searchAllMovie()
             val db = dbHelper.writableDatabase
             db.delete(DatabaseContract.MonedaEntry.TABLE_NAME,null,null)
-            searchAllMovie()
+
 
         }
 
@@ -204,7 +205,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 val coinJSON = JSONObject(coinInfo)
                 if (coinJSON.getString("ok") == "true") {
                     val coin = Gson().fromJson<AllCoins>(coinInfo, AllCoins::class.java)
-                    //addCoinToList(coin.coins)
+                    addCoinToList(coin.coins)
                     WriteInDatabase(coin.coins)
                 } else {
                     Toast.makeText(this@MainActivity, "No existe en la base de datos,", Toast.LENGTH_LONG).show()

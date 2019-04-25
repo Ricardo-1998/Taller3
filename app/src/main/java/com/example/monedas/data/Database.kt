@@ -10,10 +10,10 @@ private const val SQL_CREATE_ENTRIES =
             "${BaseColumns._ID} INTEGER PRIMARY KEY," +
             "${DatabaseContract.MonedaEntry.COLUMN_NAME} TEXT," +
             "${DatabaseContract.MonedaEntry.COLUMN_VALUE} TEXT," +
-            "${DatabaseContract.MonedaEntry.COLUMN_VALUE_US} TEXT)" +
+            "${DatabaseContract.MonedaEntry.COLUMN_VALUE_US} TEXT" +
             "${DatabaseContract.MonedaEntry.COLUMN_AVAILABLE} TEXT," +
             "${DatabaseContract.MonedaEntry.COLUMN_COUNTRY} TEXT," +
-            "${DatabaseContract.MonedaEntry.COLUMN_REVIEW} TEXT)" +
+            "${DatabaseContract.MonedaEntry.COLUMN_REVIEW} TEXT" +
             "${DatabaseContract.MonedaEntry.COLUMN_IMG} TEXT)"
 
 
